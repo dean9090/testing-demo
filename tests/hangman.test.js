@@ -2,6 +2,12 @@ const { hangman } = require('../src/hangman')
 
 describe('Hangman', () => {
 
+  test('emoji', () => {
+    const received = hangman('👹📲', '👹')
+    const expected = '👹_'
+    expect(received).toBe(expected)
+  })
+
   test('hello', () => {
     const received = hangman('hello', 'el')
     const expected = '_ell_'
